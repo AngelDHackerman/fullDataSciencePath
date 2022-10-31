@@ -1,4 +1,5 @@
--- comando para iniciar postgres:
+-- ? comandos PSQL para trabajar en la consola de postgres:
+
 `sudo -u postgres psql`
 
 `\l` -- Lista todas las bases de datos 
@@ -15,6 +16,19 @@
 
 `\timing` -- muestra el tiempo que tomo ejecutar los comandos 
 
+`\dt` -- Listar las tablas de la base de datos
+
+`\d` -- <nombre_tabla> Describir una tabla
+
+`\dn` -- Listar los esquemas de la base de datos actual
+
+`\df` -- Listar las funciones disponibles de la base de datos actual
+
+`\dv` -- Listar las vistas de la base de datos actual
+
+`\du` -- Listar los usuarios y sus roles de la base de datos actual
+
+
 
 
 
@@ -23,4 +37,5 @@ SHOW config_file; -- ? Esto nos muestra donde estan los archivos de configuracio
 `cd more /etc/postgresql/12/main/` -- Es donde se pueden encontrar los archivos de configuracion.
 
 `postgresql.conf` -- ! Este archivo de configuracion es muy importante antes de arrancar cualquier proyecto, con eso podemos ver la cantidad de parametros que se pueden modificar.
+`pg_hba.conf` -- ! Este archivo configura las entradas de usuarios linux, y que permisos tienen en la base de datos.
 
