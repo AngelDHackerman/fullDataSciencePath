@@ -17,4 +17,10 @@
 
 
 
+
 SHOW config_file; -- ? Esto nos muestra donde estan los archivos de configuracion.
+
+`cd more /etc/postgresql/12/main/` -- Es donde se pueden encontrar los archivos de configuracion.
+
+`postgresql.conf` -- ! Este archivo de configuracion es muy importante antes de arrancar cualquier proyecto, con eso podemos ver la cantidad de parametros que se pueden modificar.
+
