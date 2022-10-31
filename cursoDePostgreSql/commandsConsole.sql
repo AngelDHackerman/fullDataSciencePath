@@ -14,3 +14,7 @@
 `\g` -- ejecuta el comando ejecutado previamente. 
 
 `\timing` -- muestra el tiempo que tomo ejecutar los comandos 
+
+
+
+SHOW config_file; -- ? Esto nos muestra donde estan los archivos de configuracion.
