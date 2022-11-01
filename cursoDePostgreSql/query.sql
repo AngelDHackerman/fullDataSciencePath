@@ -16,3 +16,9 @@ SELECT * FROM tren;
 UPDATE tren SET modelo = 'Honda 0726' WHERE id = 1;
 
 DELETE FROM tren WHERE ID = 1;
+
+
+
+-- check the current date: 
+
+SELECT current_date;
