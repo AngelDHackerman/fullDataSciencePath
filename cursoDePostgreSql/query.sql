@@ -22,3 +22,15 @@ DELETE FROM tren WHERE ID = 1;
 -- check the current date: 
 
 SELECT current_date;
+
+-- Creando tablas particionadas: 
+
+CREATE TABLE public.bitacora_viaje
+(
+    id serial,
+    id_viaje integer,
+    fecha date
+) PARTITION BY RANGE (fecha);
+
+ALTER TABLE IF EXISTS public.bitacora_viaje
+    OWNER to postgres;
