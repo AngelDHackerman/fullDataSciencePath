@@ -57,7 +57,7 @@ ALTER ROLE user_name_here WITH SUPERUSER -- same as above it now has the SUPERUS
 ALTER ROLE user_name_here WITH PASSWORD 'password_you_want'
 
 
--- ! switch user in the terminal: 
+psql -d dataBase_name -U yourUserName  -- ! switch user in the terminal: 
 
-psql -d dataBase_name -U yourUserName
+DROP ROLE user_name;  -- ? It will delete user in the database 
 
