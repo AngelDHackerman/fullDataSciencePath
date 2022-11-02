@@ -34,3 +34,18 @@ CREATE TABLE public.bitacora_viaje
 
 ALTER TABLE IF EXISTS public.bitacora_viaje
     OWNER to postgres;
+
+-- this is the partition of the table above:
+
+CREATE TABLE bitacora_viaje202201 PARTITION OF bitacora_viaje
+FOR VALUES FROM ('2020-01-01') TO ('2023-01-01');
+
+-- then we can insert the values we want to add.
+
+INSERT INTO public.bitacora_viaje(
+	id_viaje, fecha)
+	VALUES (1, '2020-01-01');
+	
+-- after that we can consult the partition of "bitacora_viaje":
+
+SELECT * FROM bitacora_viaje;
