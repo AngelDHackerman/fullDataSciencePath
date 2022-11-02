@@ -1,41 +1,63 @@
 -- ? comandos PSQL para trabajar en la consola de postgres:
 
-`sudo -u postgres psql`
+sudo -u postgres psql
 
-`\l` -- Lista todas las bases de datos 
+\? -- ve todos los commandos de psql
 
-`\h` -- lista todos los comandos disponibles 
+\l -- Lista todas las bases de datos 
 
-`\h command_name` -- Muestra como funciona el comando mencionado 
+\h -- lista todos los comandos disponibles 
 
-`\c dataBase_name` -- cambia a la base de datos deseada. 
+\h command_name -- Muestra como funciona el comando mencionado 
 
-`SELECT version();` -- Nos da la version utilizada en postgres. 
+\c dataBase_name -- cambia a la base de datos deseada. 
 
-`\g` -- ejecuta el comando ejecutado previamente. 
+SELECT version(); -- Nos da la version utilizada en postgres. 
 
-`\timing` -- muestra el tiempo que tomo ejecutar los comandos 
+\g -- ejecuta el comando ejecutado previamente. 
 
-`\dt` -- Listar las tablas de la base de datos
+\timing -- muestra el tiempo que tomo ejecutar los comandos 
 
-`\d` -- <nombre_tabla> Describir una tabla
+\dt -- Listar las tablas de la base de datos
 
-`\dn` -- Listar los esquemas de la base de datos actual
+\d -- <nombre_tabla> Describir una tabla
 
-`\df` -- Listar las funciones disponibles de la base de datos actual
+\dn -- Listar los esquemas de la base de datos actual
 
-`\dv` -- Listar las vistas de la base de datos actual
+\df -- Listar las funciones disponibles de la base de datos actual
 
-`\du` -- Listar los usuarios y sus roles de la base de datos actual
+\dv -- Listar las vistas de la base de datos actual
 
-
+\du -- Listar los usuarios y sus roles de la base de datos actual
 
 
 
 SHOW config_file; -- ? Esto nos muestra donde estan los archivos de configuracion.
 
-`cd more /etc/postgresql/12/main/` -- Es donde se pueden encontrar los archivos de configuracion.
+cd /etc/postgresql/12/main/ -- Es donde se pueden encontrar los archivos de configuracion.
+postgresql.conf -- ! Este archivo de configuracion es muy importante antes de arrancar cualquier proyecto, con eso podemos ver la cantidad de parametros que se pueden modificar.
+pg_hba.conf -- ! Este archivo configura las entradas de usuarios linux, y que permisos tienen en la base de datos.
 
-`postgresql.conf` -- ! Este archivo de configuracion es muy importante antes de arrancar cualquier proyecto, con eso podemos ver la cantidad de parametros que se pueden modificar.
-`pg_hba.conf` -- ! Este archivo configura las entradas de usuarios linux, y que permisos tienen en la base de datos.
+
+
+-- ? Creando roles para usuarios en postgres
+
+\h create role -- show the help for the command "create role"
+
+CREATE ROLE user_name_here  -- in this way the user has all default attributes and no password
+
+\dg -- it shows all the users available in our data base and its atributes
+
+\conninfo  -- ? This show the current user connected to the database
+
+ALTER ROLE user_name_here WITH LOGIN -- it will give the user the ability to login into the DB.
+
+ALTER ROLE user_name_here WITH SUPERUSER -- same as above it now has the SUPERUSER ability, you can do this with all the options of users.
+
+ALTER ROLE user_name_here WITH PASSWORD 'password_you_want'
+
+
+-- ! switch user in the terminal: 
+
+psql -d dataBase_name -U yourUserName
 
