@@ -49,3 +49,18 @@ INSERT INTO public.bitacora_viaje(
 -- after that we can consult the partition of "bitacora_viaje":
 
 SELECT * FROM bitacora_viaje;
+
+
+
+-- ! Joins: 
+
+-- Esto muestra los vaijes tomados por los pasajeros: 
+
+SELECT * from pasajero
+JOIN viaje ON (viaje.id_pasajero = pasajero.id);
+
+-- Muestra los pasajeros que no han tomado viajes: 
+
+SELECT * FROM pasajero
+LEFT JOIN viaje ON (viaje.id_pasajero = pasajero.id)
+WHERE viaje.id IS NULL; 
