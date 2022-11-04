@@ -64,3 +64,25 @@ JOIN viaje ON (viaje.id_pasajero = pasajero.id);
 SELECT * FROM pasajero
 LEFT JOIN viaje ON (viaje.id_pasajero = pasajero.id)
 WHERE viaje.id IS NULL; 
+
+
+-- ! On conflict 
+
+INSERT INTO public.estacion(
+	id, nombre, direccion)
+	VALUES (1, 'Nombre X', 'Dire')  -- en este caso intentamos modificar el id pero este ya existe
+	ON CONFLICT (id) DO UPDATE SET nombre = 'Nombre X', direccion = 'Dire';  -- por lo tanto on conflict resuelve este problema con la opcion de update
+
+
+-- ! Like and ILike
+
+SELECT nombre 
+	FROM public.pasajero
+	WHERE nombre ILIKE 'a%';
+
+
+-- ! Not and IS Not
+
+SELECT * 
+	FROM public.tren
+	WHERE modelo IS NOT NULL;
