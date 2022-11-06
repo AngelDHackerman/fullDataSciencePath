@@ -30,8 +30,12 @@ ALTER FUNCTION public.importante()
 
 -- * Asi se crean los triggers 
 
-CREATE TRIGGER mi_trigger 
-AFTER INSERT 
-ON pasajero 
-FOR EACH ROW
-EXECUTE PROCEDURE importante();
+CREATE TRIGGER mi_trigger
+    AFTER INSERT
+    ON public.pasajero
+    FOR EACH ROW
+    EXECUTE FUNCTION public.importante();
+
+
+-- * Asi se insertan datos con los tiggers 
+
