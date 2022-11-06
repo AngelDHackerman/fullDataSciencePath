@@ -49,9 +49,32 @@ END
 $$
 LANGUAGE PLPGSQL; -- se DEBE indicar que tipo de lenguaje se esta ejecutando. 
 
-
 -- * asi invocamos a la funcion: 
 
-SELECT importantePL(); 
+SELECT importantePL(); -- En este caso 'Data output' mostrara nada, pero en mesajes se encontraran los mesajes que nos debio lanzar la funcion.
 
--- En este caso 'Data output' mostrara nada, pero en mesajes se encontraran los mesajes que nos debio lanzar la funcion.
+
+
+CREATE OR REPLACE FUNCTION importantePL2() -- Si la funcion ya esta creada, esto los sustituyira
+RETURNS integer -- se declara que tipo de valor retorna, en este caso retorna un numero
+AS $$ 
+DECLARE 
+rec record;
+contador integer := 0;
+BEGIN
+	FOR rec IN SELECT * FROM pasajero LOOP 
+	RAISE NOTICE 'Un pasajero se llama %', rec.nombre;
+	contador := contador + 1;
+	END LOOP;
+	RAISE NOTICE 'Conteo es %', contador;
+	RETURN contador; -- Aqui se indica que queremos que la funcion nos retorne. 
+END
+$$
+LANGUAGE PLPGSQL; 
+
+SELECT importantePL2(); 
+
+
+-- ? Asi se eliminan las funciones: 
+
+DROP FUNCTION <nombre>(); 
