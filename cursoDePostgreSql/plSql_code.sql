@@ -33,6 +33,8 @@ $$
 
     -- ? convirtiendo la PL en una funcion: 
 
+		-- ! Es mejor si las funciones NO llevan mayuscula
+
 CREATE FUNCTION importantePL() -- asi se declara e inicia la nueva funcion
 RETURNS void -- se declara que tipo de valor retorna, en este caso retorna 'nada', (void) 
 AS $$ -- as, hace referencia al codigo de abajo
