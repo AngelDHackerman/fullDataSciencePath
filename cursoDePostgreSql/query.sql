@@ -86,3 +86,20 @@ SELECT nombre
 SELECT * 
 	FROM public.tren
 	WHERE modelo IS NOT NULL;
+
+
+
+-- Vistas materializadas 
+
+	-- Definicion de la vista materializada: 
+
+SELECT viaje.id,
+    viaje.id_pasajero,
+    viaje.id_trayecto,
+    viaje.inicio,
+    viaje.fin
+  FROM viaje
+  WHERE viaje.inicio > '22:00:00'::time without time zone;
+
+
+REFRESH MATERIALIZED VIEW despues_noche_mview;
