@@ -106,15 +106,16 @@ REFRESH MATERIALIZED VIEW despues_noche_mview;
 
 
 
--- ! Consultando bases de datos remotas 
+		-- ! Consultando bases de datos remotas 
 
 -- ? Instalar la extension de dblink para bases remotas:
 
 CREATE EXTENSION dblink; 
 
 
-
 -- ? hacer la consulta a la base remota: 
+
+-- * host=127.0.0.1  Aqui deberia ir nuesta IP externa o el nombre de dominio
 
 SELECT * FROM 
 dblink ('dbname=remota 
@@ -126,10 +127,31 @@ dblink ('dbname=remota
     AS datos_remotos(id integer, fecha date) -- AS datos_remotos, nos permite obtener la informacion de regreso y darle un formato local
 
 
+-- Haciendo join de la tabla remota con las tablas locales 
+-- con esto vemos el ID del usuario local que hace match con la tabla remota
+
+SELECT * FROM pasajero
+JOIN 
+dblink ('dbname=remoto 
+		port=5432
+		host=127.0.0.1 
+		user=usuario_consulta 
+		password=angel1234', 
+    'SELECT id, fecha FROM vip')
+    AS datos_remotos(id integer, fecha date)
+USING (id)
 
 
+-- ? Consultando desde la base remota, nuestra base local 
 
 
-
-
-
+SELECT * FROM vip
+JOIN 
+dblink ('dbname=transporte2 
+		port=5432
+		host=127.0.0.1 
+		user=usuario_consulta 
+		password=angel1234', 
+    'SELECT id, nombre FROM pasajero')
+    AS datos_locales(id integer, nombre character varying)
+USING (id)
