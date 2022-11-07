@@ -105,3 +105,31 @@ SELECT viaje.id,
 REFRESH MATERIALIZED VIEW despues_noche_mview;
 
 
+
+-- ! Consultando bases de datos remotas 
+
+-- ? Instalar la extension de dblink para bases remotas:
+
+CREATE EXTENSION dblink; 
+
+
+
+-- ? hacer la consulta a la base remota: 
+
+SELECT * FROM 
+dblink ('dbname=remota 
+		port=5432 
+		host=127.0.0.1 
+		user=usuario_consulta 
+		password=angel1234', 
+    'SELECT id, fecha FROM vip') -- Esta ultima linea es el comando a ejecutar en la base remota
+    AS datos_remotos(id integer, fecha date) -- AS datos_remotos, nos permite obtener la informacion de regreso y darle un formato local
+
+
+
+
+
+
+
+
+
