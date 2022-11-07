@@ -40,7 +40,7 @@ pg_hba.conf -- ! Este archivo configura las entradas de usuarios linux, y que pe
 
 
 
--- ? Creando roles para usuarios en postgres
+-- ! Creando roles para usuarios en postgres
 
 \h create role -- show the help for the command "create role"
 
@@ -61,3 +61,14 @@ psql -d dataBase_name -U yourUserName  -- ! switch user in the terminal:
 
 DROP ROLE user_name;  -- ? It will delete user in the database 
 
+
+
+-- ! Cambiando de contraseña a un usuario en postgres 
+
+-- 1)
+sudo -u postgres psql
+
+-- 2)
+ALTER USER usuario WITH PASSWORD 'nueva_password'; 
+
+-- 3) la consola nos debe mostrar un mensaje "ALTER ROLE"
