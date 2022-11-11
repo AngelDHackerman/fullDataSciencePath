@@ -34,6 +34,7 @@ WHERE nombre = 'Wanda'
 	);
 
 -- ! Este nos traera a todos los "Wanda Billington" y a todo lo que se apellide "Billington"
+
 SELECT * FROM platzi.alumnos
 WHERE nombre = 'Wanda'
 	AND	apellido = 'Billington'
@@ -46,3 +47,8 @@ WHERE nombre = 'Wanda'
 -- ? https://www.w3schools.com/sql/sql_like.asp
 
 
+
+    -- ORDER BY
+
+SELECT * FROM platzi.alumnos
+ORDER BY fecha_incorporacion DESC; 
