@@ -22,3 +22,5 @@ SELECT * FROM (
 	FROM platzi.alumnos
 ) AS alumnos_with_row_nums
 WHERE row_id < 6; 
+
+
