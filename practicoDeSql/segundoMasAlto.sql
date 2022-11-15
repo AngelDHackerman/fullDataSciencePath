@@ -33,3 +33,14 @@ INNER JOIN (  -- Este de abajo es un subquery que nos da el valor de colegiatura
 ON datos_alumnos.colegiatura = segunda_mayor_colegiatura.colegiatura
 
 
+-- ? Forma mas simple de hacerlo: 
+
+SELECT * 
+FROM platzi.alumnos AS datos_alumnos
+WHERE colegiatura = ( -- where colegiatura, sea igual a lo que nos arroje el siguiente subquery
+	SELECT DISTINCT colegiatura 
+	FROM platzi.alumnos
+	WHERE tutor_id = 20
+	ORDER BY colegiatura DESC 
+	LIMIT 1 OFFSET 1
+)
