@@ -26,3 +26,10 @@ SELECT DATE_PART('HOUR', fecha_incorporacion) AS hora_incorporacion,
 		DATE_PART('MINUTE', fecha_incorporacion) AS minuto_incorporacion,
 		DATE_PART('SECOND', fecha_incorporacion) AS segundo_incorporacion
 FROM platzi.alumnos; 
+
+
+-- Mostrando los alumnos por el año que ingresaron: 
+
+SELECT * 
+FROM platzi.alumnos 
+WHERE (EXTRACT(YEAR FROM fecha_incorporacion)) = 2019;
