@@ -24,7 +24,7 @@ ORDER BY a.carrera_id;
 
 
 
--- ? Mostrando todas las carreras que tienen ID y su nombre
+-- ? Mostrando todas las carreras y su nombre
 
 SELECT  a.nombre,
 		a.apellido,
@@ -35,3 +35,48 @@ FROM 	platzi.alumnos AS a
 	LEFT JOIN platzi.carreras AS c
 	ON a.carrera_id = c.id
 ORDER BY carrera_id DESC;
+
+
+
+-- ! Usando un right join
+
+SELECT  a.nombre,
+		a.apellido,
+		a.carrera_id,
+		c.id,
+		c.carrera
+FROM 	platzi.alumnos AS a
+	RIGHT JOIN platzi.carreras AS c
+	ON a.carrera_id = c.id
+ORDER BY C.id DESC;
+
+
+-- ! RIGHT JOIN
+-- ? Mostrando las carreras que NO tienen alumnos
+
+SELECT  a.nombre,
+		a.apellido,
+		a.carrera_id,
+		c.id,
+		c.carrera
+FROM 	platzi.alumnos AS a
+	RIGHT JOIN platzi.carreras AS c
+	ON a.carrera_id = c.id
+WHERE a.id IS NULL
+ORDER BY C.id DESC;
+
+
+
+-- ! INNER JOIN
+-- ? mostrando carreras que tienen alumnos y no hay null's
+-- inner join, es probablemente el join mas utilizado.
+
+SELECT  a.nombre,
+		a.apellido,
+		a.carrera_id,
+		c.id,
+		c.carrera
+FROM 	platzi.alumnos AS a
+	INNER JOIN platzi.carreras AS c
+	ON a.carrera_id = c.id
+ORDER BY C.id DESC;
