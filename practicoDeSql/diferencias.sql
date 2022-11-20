@@ -7,7 +7,7 @@ GROUP BY carrera_id
 ORDER BY cuenta DESC;
 
 
--- ! Esto es un LEFT JOIN exclusive
+      -- ! Esto es un LEFT JOIN exclusive
 -- ? Muestra las carreras donde su "id" es "null"
 
 SELECT  a.nombre,
@@ -22,3 +22,16 @@ FROM 	platzi.alumnos AS a
 WHERE c.id IS NULL  -- Esta es la sintaxis correcta para los id NULL
 ORDER BY a.carrera_id;
 
+
+
+-- ? Mostrando todas las carreras que tienen ID y su nombre
+
+SELECT  a.nombre,
+		a.apellido,
+		a.carrera_id,
+		c.id,
+		c.carrera
+FROM 	platzi.alumnos AS a
+	LEFT JOIN platzi.carreras AS c
+	ON a.carrera_id = c.id
+ORDER BY carrera_id DESC;
