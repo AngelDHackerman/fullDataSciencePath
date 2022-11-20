@@ -27,5 +27,16 @@ SELECT numrange(11.1, 22.2) && numrange (20.0, 30.0);
 -- Upper devuelve el valor mas alto y lower el mas bajo
 
 SELECT UPPER (int8range (15, 35));
-
 SELECT LOWER (int8range (15, 35));
+
+
+-- ? Valores en comun
+-- Devuelve los valores que tienen en comun ambos rangos, en este caso (15, 20)
+
+SELECT int4range (10, 20) * int4range (15, 25);
+
+
+-- ? ISEMTPY 
+-- Devuelve un boolean, muestra si el rango esta vacio o no.
+
+SELECT ISEMPTY (numrange(1, 5));
