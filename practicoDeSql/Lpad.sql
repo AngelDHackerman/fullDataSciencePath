@@ -1,6 +1,6 @@
 
+-- ! left padding, el string "sql" debe medir 15 characteres, y los que falten rellenalos con "*"
 
--- ? left padding, el string "sql" debe medir 15 characteres, y los que falten rellenalos con "*"
 
 SELECT lpad ('sql', 15, '*'); 
 
@@ -20,8 +20,18 @@ WHERE id < 10;
 -- **sql
 
 
--- ? Creando un triangulo en SQL
+-- ? Creando un triangulo solo de '*' en SQL
 
 SELECT lpad('*', id, '*')
 FROM platzi.alumnos
 WHERE id < 10;
+
+
+-- ? Aqui creamos un triangulo de '*' usando como referencia el numero de filas computadas
+
+SELECT lpad ('*', CAST(row_id AS int), '*')  -- CAST(), transforma "row_id" de un string a un integer.
+FROM (
+	SELECT ROW_NUMBER() OVER() AS row_id, * -- ROW_NUMBER() OVER(); selecciona todas las filas, sobre todas las particiones de las tablas
+	FROM platzi.alumnos
+) AS alumnos_with_row_id
+WHERE row_id <= 5;
