@@ -35,3 +35,17 @@ FROM generate_series(
           '2022-11-01 00:00:00'::timestamp, -- ::timestamp, asi se castea el dato tipo string a timestamp
 					'2022-11-25 14:00:00', '10 hours'
 );
+
+
+
+-- ? INNER JOIN con los generate_series
+
+SELECT  a.id,
+		a.nombre,
+		a.apellido,
+		a.carrera_id,
+		s.a
+FROM platzi.alumnos AS a
+	INNER JOIN generate_series(0, 10) AS s(a)  -- Esto genera una tabla dinamica del 0 al 10 llamada "s" y su unico elemento es "a"
+	ON s.a = a.carrera_id
+ORDER BY a.carrera_id;
