@@ -35,3 +35,12 @@ FROM (
 	FROM platzi.alumnos
 ) AS alumnos_with_row_id
 WHERE row_id <= 5;
+
+
+
+-- ! Podemos hacer exactamente lo mismo pero en rPad
+
+SELECT rpad('sql', id, '*')
+FROM platzi.alumnos
+WHERE id < 10;
+
