@@ -16,3 +16,9 @@ FROM platzi.alumnos;
 SELECT  LAST_VALUE(colegiatura) 
         OVER(PARTITION BY carrera_id) AS ultima_colegiatura, *
 FROM platzi.alumnos;
+
+
+-- ? Muestra (en este caso) la tercera colegiatura que tiene la "carrera_id" en la tabla
+
+SELECT NTH_VALUE(colegiatura, 3) OVER(PARTITION BY carrera_id) AS tercera_colegiatura, *
+FROM platzi.alumnos;
