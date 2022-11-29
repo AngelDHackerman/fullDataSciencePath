@@ -24,3 +24,9 @@ CREATE TRIGGER aaa_changes  -- * creando el triger de la funcion antes creada
 	ON aaa -- * se especifica que tabla activara el trigger 
 	FOR EACH ROW 
 	EXECUTE PROCEDURE duplicate_records();
+
+
+    -- ! Insertando los valores de prueba:
+
+INSERT INTO aaa(bbb, ccc)
+VALUES ('abcde', 'efghi');
