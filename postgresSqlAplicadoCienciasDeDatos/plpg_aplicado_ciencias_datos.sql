@@ -31,11 +31,9 @@ END
 $$;
 
 
+-- ! Invocando a la funcion:
 
-
-
-
-
+SELECT movies_stats();
 
 
 
