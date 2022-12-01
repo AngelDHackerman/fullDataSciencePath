@@ -1,7 +1,7 @@
 
 -- ? Asi se crean los tipos de datos
 
-CREATE TYPE humor AS ENUM ('triste', 'normal', 'feliz'); -- ENUM es como un array.
+CREATE TYPE humor AS ENUM ('triste', 'normal', 'feliz'); -- ! ENUM es como un array, pero este solo define la lista de posibilidades que podemos elegir
 
 
 -- ? creando una tabla con el nuevo tipo de dato
