@@ -39,3 +39,19 @@ ORDER BY total_peliculas_clasificacion DESC;
 
 SELECT ROUND(AVG(precio_renta), 2) 
 FROM peliculas
+
+
+-- ? Sacando el precio promedio segun la clasificacion de cada pelicula
+
+SELECT clasificacion, ROUND(AVG(precio_renta),2) AS precio_promedio
+FROM peliculas
+GROUP BY clasificacion 
+ORDER BY precio_promedio DESC;
+
+
+-- ? Viendo el tiempo de duracion promedio, segun la clasificiacion
+
+SELECT clasificacion , ROUND(AVG(duracion),2) AS tiempo_promedio
+FROM peliculas
+GROUP BY clasificacion
+ORDER BY tiempo_promedio DESC;
