@@ -26,3 +26,10 @@ ORDER BY precio_renta;
 SELECT SUM(precio_renta)
 FROM peliculas;
 
+
+-- ? Conteo de cada pelicula en las diversas clasificaciones: 
+
+SELECT clasificacion, COUNT(*) AS total_peliculas_clasificacion
+FROM peliculas
+GROUP BY clasificacion
+ORDER BY total_peliculas_clasificacion DESC;
