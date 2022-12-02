@@ -29,7 +29,13 @@ FROM peliculas;
 
 -- ? Conteo de cada pelicula en las diversas clasificaciones: 
 
-SELECT clasificacion, COUNT(*) AS total_peliculas_clasificacion
+SELECT clasificacion, COUNT(*) AS total_peliculas_clasificacion  -- * El count de las peliculas, se el da el alias para luego poder ordenarlas 
 FROM peliculas
 GROUP BY clasificacion
 ORDER BY total_peliculas_clasificacion DESC;
+
+
+-- ? Sacando el precio promedio de la renta, con solo 2 decimales 
+
+SELECT ROUND(AVG(precio_renta), 2) 
+FROM peliculas
