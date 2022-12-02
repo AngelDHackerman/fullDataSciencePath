@@ -1,4 +1,7 @@
 
+-- ! usando funciones de MAX, MIN, SUM, COUNT, AVG
+
+
 -- ? Sacando el precio maximo de renta: 
 
 SELECT MAX(precio_renta)
@@ -55,3 +58,13 @@ SELECT clasificacion , ROUND(AVG(duracion),2) AS tiempo_promedio
 FROM peliculas
 GROUP BY clasificacion
 ORDER BY tiempo_promedio DESC;
+
+
+-- ? Promedio de la duracion de la renta segun la clasificacion. 
+
+SELECT clasificacion, ROUND(AVG(duracion_renta),2) AS duracion_renta
+FROM peliculas
+GROUP BY  clasificacion
+ORDER BY duracion_renta DESC;
+
+
