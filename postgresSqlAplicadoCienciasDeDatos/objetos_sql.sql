@@ -9,8 +9,8 @@ CREATE TABLE ordenes (  -- asi se crean las tablas
 
 -- ? Insertando valores en la tabla
 
-INSERT INTO ordenes (info) -- * los datos seran introducidos en info y el id se genera automaticamente.
-VALUES  -- * abajo se muestran como se introducen los datos.
+INSERT INTO ordenes (info) -- los datos seran introducidos en info y el id se genera automaticamente.
+VALUES  -- abajo se muestran como se introducen los datos.
 	(
 		'{"cliente": "David Sanchez", "items": {"producto":"Biberon", "cantidad": "24"}}'
 	),
@@ -20,3 +20,12 @@ VALUES  -- * abajo se muestran como se introducen los datos.
 	(
 		'{"cliente": "Israel vasquez", "items": {"producto":"tren mini", "cantidad": "3"}}'
 	);
+
+
+
+-- ? Seleccionando la informacion de los json. 
+
+SELECT 
+	info -> 'cliente' AS cliente  -- info es el nombre de la tabla, 'cliente' el nombre de la clave que buscamos
+FROM ordenes;
+
