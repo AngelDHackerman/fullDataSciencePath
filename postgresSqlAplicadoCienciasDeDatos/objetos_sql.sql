@@ -24,8 +24,15 @@ VALUES  -- abajo se muestran como se introducen los datos.
 
 
 -- ? Seleccionando la informacion de los json. 
+-- ! Aqui nos devuelve la info en forma de "string"
 
 SELECT 
 	info -> 'cliente' AS cliente  -- info es el nombre de la tabla, 'cliente' el nombre de la clave que buscamos
 FROM ordenes;
 
+
+-- ! Aqui nos la devuelve como un texto plano
+
+SELECT 
+	info ->> 'cliente' AS cliente  -- * lo que cambia es el ->>
+FROM ordenes;
