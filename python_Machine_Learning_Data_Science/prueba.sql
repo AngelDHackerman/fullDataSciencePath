@@ -1,0 +1,1 @@
+SELECT prueba FROM test
