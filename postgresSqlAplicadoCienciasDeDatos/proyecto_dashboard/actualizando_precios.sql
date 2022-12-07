@@ -33,3 +33,8 @@ END
 
 -- todo: Crando el Trigger tal cual: 
 
+CREATE TRIGGER trigger_update_tipos_cambio
+	AFTER INSERT OR UPDATE
+	ON public.peliculas
+	FOR EACH ROW  -- * El trigger actuara por cada fila 'row' que agregemos
+	EXECUTE PROCEDURE public.precio_peliculas_tipo_cambio();
