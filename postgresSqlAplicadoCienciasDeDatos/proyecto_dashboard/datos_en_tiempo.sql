@@ -20,4 +20,4 @@ SELECT date_part('year', rentas.fecha_renta) AS anio, -- * muestra el año de cu
 		COUNT (*) AS numero_rentas
 FROM 	rentas
 GROUP BY anio, mes
-ORDER BY numero_rentas DESC;
+ORDER BY anio, mes;
