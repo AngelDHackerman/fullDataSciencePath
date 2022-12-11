@@ -6,3 +6,7 @@
 
 4^2
 
+
+# ? Trabajando desde la consola de R studio: 
+
+View(orangeec)
