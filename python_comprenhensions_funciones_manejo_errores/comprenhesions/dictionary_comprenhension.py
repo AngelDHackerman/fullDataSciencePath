@@ -37,4 +37,7 @@ print('\n')
 names = ['nico', 'zule', 'santi']
 ages = [12, 56, 98]
 
-print(list(zip(names, ages)))  # ? Asi unimos los 2 diccionarios usando el metodo zip()
+print(list(zip(names, ages)))  # Asi unimos los 2 arrays usando el metodo zip(), pero aqui se generan tuplas dentro de un array
+
+new_dict = {name: age for (name, age) in zip(names, ages)}  # ? Asi creamos un diccionaro apartir de 2 arrays, usando dict comprenhension y el metodo zip()
+print(new_dict)
