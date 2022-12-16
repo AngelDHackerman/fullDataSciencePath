@@ -1,7 +1,5 @@
 import random
 
-rounds = 1
-
 # Eligiendo las opciones del usuario y de la computadora:
 
 def choose_options ():
@@ -53,13 +51,15 @@ def check_rules(user_option, computer_option, user_wins, computer_wins):
       print('piedra gana a tijera')
       print('computer gano!')
       computer_wins += 1
-
+  return user_wins, computer_wins # devolvemos las veces que cada jugador ha ganado.
 
 # Funcion maestra, que corre la logica del juego:
 
 def run_game():
   user_wins = 0
   computer_wins = 0
+  rounds = 1
+
   while True:
 
     print('*' * 10)
@@ -71,7 +71,7 @@ def run_game():
     rounds += 1
 
     user_option, computer_option = choose_options()  # aqui recuperamos los valores que retorna la funcion choose_options()
-    check_rules(user_option, computer_option)  # se ejecuta la funcion para validar las selecciones
+    user_wins, computer_wins = check_rules(user_option, computer_option) # ? se ejecuta la funcion para validar las selecciones y retorna los "wins" de cada jugador
 
     if computer_wins == 2:
       print('El ganador es la computadora')
