@@ -1,11 +1,25 @@
 import random
 
-options = ('piedra', 'papel', 'tijera')
-
 computer_wins = 0
 user_wins = 0
 
 rounds = 1
+
+def choose_options ():
+    options = ('piedra', 'papel', 'tijera')
+    user_option = input('piedra, papel o tijera => ')
+    user_option = user_option.lower()
+
+    if not user_option in options:
+      print('esa opcion no es valida')
+      # continue
+      return None, None  # Se indica que si la opcion no es valida, tanto el user como computer, deben retornar un "none"
+
+    computer_option = random.choice(options)
+
+    print('User option =>', user_option)
+    print('Computer option =>', computer_option)
+    return user_option, computer_option # retornamos los valores para ser usados mas adelante
 
 while True:
 
@@ -15,20 +29,9 @@ while True:
 
     print('computer_wins', computer_wins)
     print('user_wins', user_wins)
-
-    user_option = input('piedra, papel o tijera => ')
-    user_option = user_option.lower()
-
     rounds += 1
 
-    if not user_option in options:
-      print('esa opcion no es valida')
-      continue
-
-    computer_option = random.choice(options)
-
-    print('User option =>', user_option)
-    print('Computer option =>', computer_option)
+    choose_options()
 
     if user_option == computer_option:
         print('Empate!')
