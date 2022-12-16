@@ -71,7 +71,7 @@ def run_game():
     rounds += 1
 
     user_option, computer_option = choose_options()  # aqui recuperamos los valores que retorna la funcion choose_options()
-    user_wins, computer_wins = check_rules(user_option, computer_option) # ? se ejecuta la funcion para validar las selecciones y retorna los "wins" de cada jugador
+    user_wins, computer_wins = check_rules(user_option, computer_option, user_wins, computer_wins) # ? se ejecuta la funcion para validar las selecciones y retorna los "wins" de cada jugador
 
     if computer_wins == 2:
       print('El ganador es la computadora')
@@ -81,4 +81,4 @@ def run_game():
       print('El ganador es el usuario')
       break
 
-    
+run_game()  # ejecutamos el juego
