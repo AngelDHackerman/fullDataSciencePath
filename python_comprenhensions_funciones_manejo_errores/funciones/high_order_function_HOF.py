@@ -14,7 +14,16 @@ print(result)
 
 
 
+print('\n')
 # ? HOF usando lambdas: 
+
+increment_v2 = lambda x: x + 1  # version lambda de la primer funcion "increment"
+
+
+high_order_func_V2 = lambda x, func: x + func(x)  # * se crea la funcion "x" que retorna el mismo parametro que le demos. Se crea "func" que retorna "x" + el retorno de la funcion invocada
+
+result = high_order_func_V2(2, increment_v2) # (2 + (2 + 1))
+print('Segunda version de HOF: ', result)
 
 
 
