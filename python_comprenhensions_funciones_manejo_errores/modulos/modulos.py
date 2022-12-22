@@ -27,3 +27,7 @@ print(result)
 
 print('')
 import collections  # todo: Este modulo es usado para manejar listas 
+numbers = [1, 21, 2, 3, 3, 1, 5, 6, 34, 32, 32, 21]
+counter = collections.Counter(numbers)  # ? .Counter(), muestra la frecuencia de cada elemento dentro de la lista.
+print(counter)
+
