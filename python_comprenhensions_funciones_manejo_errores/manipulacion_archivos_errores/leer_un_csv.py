@@ -13,7 +13,9 @@ def read_csv(path):
       # country_dict = {key: value for key, value in iterable}  # creamos un comprenhension para que el header 'key' y los valores 'value' se unan en un DICCIONARIO.
       country_dict = dict(iterable)  # ? Esto es una mejor opcion que la de arriba
       data.append(country_dict)  # * Creamos una lista de diccionarios 
-    print(data[0])
+    return data
 
 if __name__ == "__main__":
-  read_csv('/home/angel/fullDataSciencePath/python_comprenhensions_funciones_manejo_errores/manipulacion_archivos_errores/world_population.csv')
+  data = read_csv('/home/angel/fullDataSciencePath/python_comprenhensions_funciones_manejo_errores/manipulacion_archivos_errores/world_population.csv') # ? ejecutamos la funcion read_csv
+  print(data[0])
+
