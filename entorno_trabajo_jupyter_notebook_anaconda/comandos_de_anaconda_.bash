@@ -50,6 +50,23 @@
 `conda remove <nombre_libreria>` # conda remove pandas
 
 
+# ? Instalar un paquete especificando el canal: 
+
+`conda install --channel nombre_canal nombre_paquete` # conda install --channel conda-forge bolton
+
+
+# ? revisiones de ambientes: 
+
+`conda list --revision`  # muestra las librerias recientemente instaladas 
+
+`conda install --revision 0`  # todo: Podemos usar la revision "0" o la que deseemos. Toda libreria despues de esa revision sera desinstalada. 
+
+
+
+
+
+
+
 # * ambientes virtuales con python: 
 
 `python3 -m venv nombre_ambiente`
@@ -63,3 +80,8 @@
 # * Desactivar el ambiente: 
 
 `deactivate`
+
+
+# * ver las librerias instaladas: 
+
+`pip freeze` 
