@@ -39,6 +39,12 @@
 
 `conda create --name <nuevo_nombre> --copy --clone <ambiente_original>`  # e.g: conda create --name ambiente_prueba --copy --clone base_env
 
+
 # ? Eliminar ambientes de conda
 
 `conda env remove --name <nombre_ambiente>`
+
+
+# ? Eliminar librerias: 
+
+`conda remove <nombre_libreria>` # conda remove pandas
