@@ -62,8 +62,17 @@
 `conda install --revision 0`  # todo: Podemos usar la revision "0" o la que deseemos. Toda libreria despues de esa revision sera desinstalada. 
 
 
+# ? Exportando ambientes: 
 
+`conda env export` # * Muestra las librerias instaladas en el ambiente para que puedan ser instaladas en otro
 
+`conda env export --no-builds`  # * Solo muestra las versiones y no el hash al final de cada libreria
+
+`conda env export --from-history`  # ? Solo muestra las librerias que instalamos manualmente
+
+`conda env export --from-history --file enviroment.yml`  # ? --file: indica que se debe mandar esa info a algun archivo. enviroment.yml: es el nombre del archivo destino de nuestro output.
+
+`conda env create --file enviroment.yml`  # ? Creamos un nuevo ambiente usando las especificaciones del otro ambiente exportado. 
 
 
 
