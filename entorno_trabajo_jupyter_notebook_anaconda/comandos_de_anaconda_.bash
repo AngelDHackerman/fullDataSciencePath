@@ -48,3 +48,18 @@
 # ? Eliminar librerias: 
 
 `conda remove <nombre_libreria>` # conda remove pandas
+
+
+# * ambientes virtuales con python: 
+
+`python3 -m venv nombre_ambiente`
+
+
+# * activar el ambiente: 
+
+`source nombre_ambiente/bin/activate`
+
+
+# * Desactivar el ambiente: 
+
+`deactivate`
