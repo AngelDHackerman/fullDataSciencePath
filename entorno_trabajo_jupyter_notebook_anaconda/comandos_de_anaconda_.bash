@@ -19,6 +19,26 @@
 `conda deactivate`
 
 
+# ? Ver los paquetes actuales instalados: 
+
+`conda list`
+`conda list <nombre_paquete>` # Muestra la version y detalles del paquete llamado
+
+
+# ? Actulizar la libreria o paquete: 
+
+`conda update <nombre_paquete>` # Actualiza a la version mas reciente del paquete llamado.
+
+
+# ? Instalar la version deseada de un paquete: 
+
+`conda install <nombre_paquete=1.1 >`  # Se puede seleccionar una version anterior, o bien una version futura del paquete
+
+
+# ? Clonar las caracteristicas de un ambiente en otro: 
+
+`conda create --name <nuevo_nombre> --copy --clone <ambiente_original>`  # e.g: conda create --name ambiente_prueba --copy --clone base_env
+
 # ? Eliminar ambientes de conda
 
 `conda env remove --name <nombre_ambiente>`
