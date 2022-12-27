@@ -1,0 +1,2 @@
+
+print(False or True)
