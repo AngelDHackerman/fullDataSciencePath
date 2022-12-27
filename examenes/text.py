@@ -1,2 +1,0 @@
-
-print(False or True)

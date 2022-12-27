@@ -1,0 +1,126 @@
+16.
+Dado el siguiente bloque de código:
+original = [1,2,3,4,5] 
+new = []
+
+for x in n:
+	new.append(x * 2)
+¿Cuál de las siguientes respuestas es la sintaxis más corta para obtener el mismo resultado?
+    new = map(lambda x: x * 2, original)
+
+19.
+Creaste una función sum dentro del archivo math.py. Ahora desde el archivo main.py (en la misma carpeta que math.py) debes importar ese módulo y usar la función sum. ¿Cómo lo harías?
+  from "./math.py" import sum sum(1,2)
+
+
+==============================================================
+
+1.
+¿Cuál de los siguientes es un principio de The Zen of Python?
+  Bello es mejor que feo.
+
+2.
+¿Cuál de las siguientes es una propiedad principal CORRECTA de los Sets o Conjuntos en Python?
+  No pueden tener duplicados.
+
+3.
+¿Cuál de los siguientes es un Set o Conjunto en Python?
+  python_set = {'Nicolas', 'Miguel', 'Juan'}
+
+4.
+Dado el siguiente bloque de código:
+names = {'Nicolas', 'Miguel', 'Juan', 'Nicolas'} 
+print(names) 
+¿Cuál será el resultado?
+  {'Nicolas', 'Miguel', 'Juan'}
+
+5.
+¿Cuál será el resultado del siguiente bloque de código?
+a = {1,2}
+b = {2,3}
+print(a | b)
+  {1,2,3}
+
+6.
+¿Cuál será el resultado del siguiente bloque de código?
+a = {1,2}
+b = {2,3}
+print(a & b)
+  {2}
+
+7.
+Dado el siguiente bloque de código:
+list_comprehension.png
+¿Cuál de las siguientes respuestas con List Comprehension nos peermite obtener el mismo resultad con una sintaxis más corta?
+  n = [i - 1 for i in range(1,6) if i <= 2]
+
+8.
+Dado el siguiente bloque de código:
+Dictionary Comprehension condition.png
+¿Cuál de las siguientes respuestas con Dictionary Comprehension nos permite obtener el mismo resultad con una sintaxis más corta?
+  d = { e: e - 1 for e in range(1,6) if e <= 2 }
+
+9.
+¿Cuál de las siguientes estructuras de datos es mutable?
+  List
+
+10.
+¿Cuál de las siguientes estructuras de datos nos permite ordenar sus elementos?
+  Tuple
+
+11.
+¿Cuál de las siguientes estructuras de datos NO nos permite duplicar elementos?
+  Set
+
+12.
+¿Cuál es la forma correcta de crear una función en Python?
+  def nombre_func:
+    # …
+
+13.
+Creaste una función sum que recibe 2 parámetros y los suma entre ellos. Ahora debes almacenar el resultado de esas sumas en un conjunto. ¿Cómo lo harias?
+  func_return_correct.png
+
+14.
+La función sum(a,b) retorna 3 elementos: 1) la suma entre a y b; 2) a; y 3) b.
+Debes guardar los 3 elementos retornados en nuevas variables por fuera de la función.
+¿Cómo lo harías?
+  result, a, b = sum(1,2)
+
+15.
+Dado el siguiente bloque de código:
+def sum(x, y):
+	return x + y 
+¿Cuál de las siguientes respuestas nos permite obtener el mismo resultado, pero con una sintaxis más corta?
+  sum = lambda x, y : x + y
+
+17.
+¿La función Map en Python puede procesar dos listas al mismo tiempo?
+  Sí, pero solo iterará en ambas listas hasta la cantidad de elementos de la lista más pequeña.
+
+18.
+¿Cómo se importa el módulo functools (nativo de Python)?
+  import functools
+
+20.
+¿Cuál es la función del siguinte bloque de código: if __name__ == '__main__'?
+  Nos informa si el archivo se está ejecutando como script o como módulo.
+
+21.
+¿Cuál de los siguientes bloques de código provoca un error en Python?
+  Todas las respuestas arrojan un error.
+
+22.
+Dado el siguiente bloque de código: print(10 / user_option). Y siendo user_option una variable que puede recibir cualquier valor numérico (incluyendo 0). ¿Cómo manejarías la excepción de división sobre cero para que el código siga ejecutando a pesar del error?
+  try:
+    print(10 / user_option)
+  except ZeroDivisionError as error:
+    print(error) ```
+
+23.
+¿Cuál es la forma correcta de generar una lista usando comprensión de listas en Python?
+  characters = [character for character in 'Platzi']
+
+24.
+¿Qué uso se le da al método map() de Python?
+  Aplica una función sobre todos los elementos de un iterable y devuelve otro iterable tipo map.
