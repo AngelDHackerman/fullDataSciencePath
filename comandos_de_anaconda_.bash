@@ -94,3 +94,12 @@
 # * ver las librerias instaladas: 
 
 `pip freeze` 
+
+
+
+# todo: Comando para ordenar un json usando bash: 
+
+# instalar jq usando apt install jq
+# sorty_by(.name), es el nombre de la clave que usaremos para separar los diccionarios 
+# > newFile.json, aqui se concatena el output del comando hacia un nuevo archivo.
+jq '. | sort_by(.name)' oldFile.json > newFile.json
