@@ -1,4 +1,6 @@
-#!/home/angel/fullDataSciencePath/basico_visualizacion_datos_matplotlib_seaborn/matplotlib_seaborn/bin/python3
+#!/bin/sh
+'''exec' /home/angel/platziProgramador/DataScienceEInteligenciaArtificial/fullDataSciencePath/basico_visualizacion_datos_matplotlib_seaborn/matplotlib_seaborn/bin/python3 "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys
