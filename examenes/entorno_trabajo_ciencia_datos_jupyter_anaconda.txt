@@ -1,38 +1,38 @@
-3.
-Dadas las características de los notebooks y los scripts, ¿cuál es mejor?
-  NO ES:      Los notebooks, por supuesto. Estos permiten al científico de datos prototipar sus ideas a una velocidad vertiginosa.
-  PROBABLE:   
-
-9.
-De las siguientes opciones, ¿cuál es un entorno de trabajo de Jupyter Notebooks basado a nivel de proyecto?
-  NO ES:      Ninguna respuesta es correcta
-  PROBABLE:   
-
-10.
-¿Cuál de los siguientes servicios/tipos de Jupyter Notebooks te permite crear gráficas sin necesidad de código?
-  NO ES:      Jupyter Notebook
-  PROBABLE:   
-
 11.
 ¿Cuál de los siguientes tipos de notebooks (o servicios) te permite crear un portafolio de trabajo en forma de notebooks publicados?
   NO ES:      Google Colab
+  NO ES:      JupyterLab
   PROBABLE:   
 
 16.
 ¿Cuál de los siguientes comandos NO es válido para crear un ambiente virtual?
   NO ES:      conda env create --file environment.yml
+  NO ES:      Conda create --name testing python=3.9
   PROBABLE:   
 
 18.
 Mamba permite acelerar la creación de ambientes virtuales a través de la descarga paralela de datos y paquetes. ¿Por qué adaptarse a mamba resulta tan familiar si ya sabes conda?
   NO ES:      Tiene una sintaxis de comandos mucho más simplificada que la de conda.
+  NO ES:      Tiene atajos por defecto para los comandos de conda.
   PROBABLE:   
 
 
 
 
-
 ==========================================================================================
+
+
+9.
+De las siguientes opciones, ¿cuál es un entorno de trabajo de Jupyter Notebooks basado a nivel de proyecto?
+  Deepnote
+
+10.
+¿Cuál de los siguientes servicios/tipos de Jupyter Notebooks te permite crear gráficas sin necesidad de código?
+  Deepnote
+
+3.
+Dadas las características de los notebooks y los scripts, ¿cuál es mejor?
+  Ambos son utiles, depende del problema y objetivo que se tenga.
 
 1.
 ¿Qué es un notebook para ciencia de datos?
