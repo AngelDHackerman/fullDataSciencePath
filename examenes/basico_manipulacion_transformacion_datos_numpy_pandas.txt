@@ -1,0 +1,97 @@
+2.
+¿Cuál es el método para definir un array en Numpy?
+  NO ES:      np.array[1,2,3]
+  PROBABLE:   
+
+3.
+¿Cuál es el resultado de esta operación en NumPy es np.array(['hola','2','4','5'],dtype='float64')
+  NO ES:      Crear array con datos tipo float64.
+  PROBABLE:   
+
+13.
+¿Qué se obtiene de comando tipo df_books.loc[0:10, ['Name', 'Author']]?
+  NO ES:      Retorna las 10 primeras filas del dataset, pero solo de las columnas Name y Author.
+  PROBABLE:   
+
+16.
+¿Cuál es el comando de Pandas que retorna count, mean,std, min, max y otras variables para todas las columnas numéricas en un DataFrame?
+  NO ES:      stats
+  PROBABLE:   
+
+21.
+¿En una sentencia de Apply de Pandas a un dataset es necesario enviarle una función definida previamente?
+  NO ES:      Verdadero
+  PROBABLE:   
+
+
+
+
+
+=======================================================================================
+
+1.
+¿Podemos considerar el array como el objeto principal de NumPy?
+  Verdadero
+
+4.
+¿Con qué propiedad de NumPy puede saber la cantidad de dimensiones en un arreglo?
+  ndim
+
+5.
+¿np.arange(0,10) con cuántos elementos creará un array?
+  10
+
+6.
+¿Qué genera np.linspace(0,10,100)?
+  100 elementos de cero a 10.
+
+7.
+¿Qué forma (shape) tiene el siguente array de NumPy?
+[[7 8]
+[2 1]
+[2 4]]
+  (3,2)
+
+8.
+¿Qué retorna la propiedad std() en un array de NumPy?
+  La desviación estándar
+
+9.
+¿Cuál es el resultado del comando np.sort(arr) siendo arr = np.array([13, 6, 3, 5, 10])?
+  array([3, 5, 6, 10, 13])
+
+10.
+El comando copia_arr = arr.copy() crea una copia en memoria independiente de arr en un objeto llamado copia_arr. Esto es:
+  Verdadero
+
+11.
+¿Cuál es la estructura base para leer un archivo csv llamado file.csv con Pandas?
+  pd.read_csv(‘file.csv’)
+
+12.
+¿En qué se basa el filtrado por iloc a diferencia de loc?
+  Index
+
+14.
+¿Qué indica que el comando df.isnull() en Pandas si retorna True en una posición?
+  Que ese valor es nulo.
+
+15.
+¿Qué permite el comando de Pandas df.fillna('missing')?
+  Reemplazar los valores nulos con la palabra missing.
+
+17.
+¿Qué comando de Pandas retorna las n filas del final de un DataFrame?
+  tail
+
+18.
+Es el comando de Pandas que elimina los duplicados de un DataFrame:
+  drop_duplicates
+
+19.
+En Pandas es posible aplicar más de una función de grupo por sentencia groupby a una columna en especifico. Esto es:
+  Verdadero
+
+20.
+¿Qué debería ir en el parámetro how de la sentencia merge en Pandas para que muestre solo los match en ambos DataFrames?
+  inner

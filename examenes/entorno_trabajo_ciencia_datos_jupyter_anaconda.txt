@@ -2,25 +2,18 @@
 ¿Cuál de los siguientes tipos de notebooks (o servicios) te permite crear un portafolio de trabajo en forma de notebooks publicados?
   NO ES:      Google Colab
   NO ES:      JupyterLab
-  PROBABLE:   
-
-16.
-¿Cuál de los siguientes comandos NO es válido para crear un ambiente virtual?
-  NO ES:      conda env create --file environment.yml
-  NO ES:      Conda create --name testing python=3.9
-  PROBABLE:   
-
-18.
-Mamba permite acelerar la creación de ambientes virtuales a través de la descarga paralela de datos y paquetes. ¿Por qué adaptarse a mamba resulta tan familiar si ya sabes conda?
-  NO ES:      Tiene una sintaxis de comandos mucho más simplificada que la de conda.
-  NO ES:      Tiene atajos por defecto para los comandos de conda.
-  PROBABLE:   
-
-
+  NO ES:      Jupyter Notebook
 
 
 ==========================================================================================
 
+18.
+Mamba permite acelerar la creación de ambientes virtuales a través de la descarga paralela de datos y paquetes. ¿Por qué adaptarse a mamba resulta tan familiar si ya sabes conda?
+  Su sintaxis de comandos esta construida de tal forma de que sea lo mas similiar a la de conda.
+
+16.
+¿Cuál de los siguientes comandos NO es válido para crear un ambiente virtual?
+  conda create env --file enviroment.yml
 
 9.
 De las siguientes opciones, ¿cuál es un entorno de trabajo de Jupyter Notebooks basado a nivel de proyecto?
