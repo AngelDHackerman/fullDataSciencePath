@@ -1,33 +1,43 @@
-2.
-¿Cuál es el método para definir un array en Numpy?
-  NO ES:      np.array[1,2,3]
-  PROBABLE:   
-
-3.
-¿Cuál es el resultado de esta operación en NumPy es np.array(['hola','2','4','5'],dtype='float64')
-  NO ES:      Crear array con datos tipo float64.
-  PROBABLE:   
-
-13.
-¿Qué se obtiene de comando tipo df_books.loc[0:10, ['Name', 'Author']]?
-  NO ES:      Retorna las 10 primeras filas del dataset, pero solo de las columnas Name y Author.
-  PROBABLE:   
-
 16.
 ¿Cuál es el comando de Pandas que retorna count, mean,std, min, max y otras variables para todas las columnas numéricas en un DataFrame?
   NO ES:      stats
-  PROBABLE:   
+  NO ES:      mean
+=======================================================================================
+
+2.
+¿Cuál es el método para definir un array en Numpy?
+  np.array([1, 2, 3])
+
+3.
+¿Cuál es el resultado de esta operación en NumPy es np.array(['hola','2','4','5'],dtype='float64')
+  Error en la conversacion de los datos
+
+13.
+¿Qué se obtiene de comando tipo df_books.loc[0:10, ['Name', 'Author']]?
+  Retorna las 11 primeras filas del dataset, pero solo de las columnas Name y Author. 
+
+
+
+¿Con cuál opción de NumPy se puede filtrar un array de tipo arr = np.array([13, 6, 3, 5, 10]) para solo retornar números superariores a 7?
+
+  arr[arr>7]
+
+¿Para qué sirve el comando expand_dims de Numpy?
+
+  Sumar una dimension al array.
+
+¿Cuál es el comando de NumPy para crear un array de n elementos con valores de cero (0)?
+
+  np.zeros()
+
+
+
+
+
 
 21.
 ¿En una sentencia de Apply de Pandas a un dataset es necesario enviarle una función definida previamente?
-  NO ES:      Verdadero
-  PROBABLE:   
-
-
-
-
-
-=======================================================================================
+  Falso
 
 1.
 ¿Podemos considerar el array como el objeto principal de NumPy?
