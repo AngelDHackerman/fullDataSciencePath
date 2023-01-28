@@ -1,32 +1,22 @@
 5.
 ¿En la sentencia de Matplotlib "fig, axes = plt.subplots(nrows=1, ncols=2)" axes de qué tipo se le asigna un objeto?
-  NO ES:      Python tuple
-  PROBABLE:   
+  ndarray
+
 12.
 ¿En el parámetro data de Seaborn que se debe poner?
-  NO ES:      Datos por los que queramos separar el análisis.
-  PROBABLE:   
+  la fuente de datos
 
 15.
 Con este comando de Seaborn se pueden crear distintos tipos de datos orientados a gráficos de relación:
-  NO ES:      sns.scatter
-  PROBABLE:   
+  sns.relplot
 
 17.
 ¿Con cuál comando de Seaborn se pueden ver múltiples relaciones en todo un dataset?
-  NO ES:      sns.hist
-  PROBABLE:   
+  sns.pairplot
 
 18.
 Este tipo de gráfica muy utilizado en Seaborn es útil para visualizar estructuras matriciales:
-  NO ES:      pairplot
-  PROBABLE:   
-
-
-
-
-
-===========================================================
+  heatmap
 
 
 1.
