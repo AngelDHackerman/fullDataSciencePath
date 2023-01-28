@@ -18,7 +18,6 @@ Con este comando de Seaborn se pueden crear distintos tipos de datos orientados 
 Este tipo de gráfica muy utilizado en Seaborn es útil para visualizar estructuras matriciales:
   heatmap
 
-
 1.
 ¿Qué nos permite encontrar la visualización de datos?
   Todas las opciones son correctas.
