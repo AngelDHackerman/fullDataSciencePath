@@ -11,6 +11,7 @@ $x("//h2[@class='headline']/a/@href").map(x => x.value)  // Devuelve solo los li
 
 
 
+
 // ? Extraer los Titulos (solo texto) de las noticias: 
 
 $x("//h2//a/text()").map(a => console.log(a.wholeText))  // .wholeText, devuelve todo el texto, incluyendo espacios en blanco, saltos de linea, etc... 
@@ -26,5 +27,4 @@ $x("//div[@class='lead']/p/text()").map(x => console.log(x.wholeText))
 // ? Extraer el texto del cuerpo de la noticia: 
 
 $x("//div[@class='html-content']//p[not(@class)]/text()").map(x => console.log(x.wholeText))  // p[not(@class)], trae todos los "p" que no tienen clase
-
 

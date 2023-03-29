@@ -1,11 +1,12 @@
 
 links = //h2//a/@href
+links_v2 = //div[@class='col mb-4']/div/h2/a/@href
 Titulo = //h2//a/text()
 
 
 ** Click en alguna noticia ** 
 
 resumen = //div[@class='lead']/p/text()
-cuerpo = //div[@class='html-content']//p[not(@class)]/text()  
+cuerpo = //div[@class='html-content']//p[not(@class)]/text()
 
 
