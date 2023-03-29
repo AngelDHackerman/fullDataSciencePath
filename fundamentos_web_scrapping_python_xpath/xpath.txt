@@ -6,4 +6,6 @@ Titulo = //h2//a/text()
 ** Click en alguna noticia ** 
 
 resumen = //div[@class='lead']/p/text()
-cuerpo de la noticia = //div[@class='html-content']//p/text()
+cuerpo = //div[@class='html-content']//p[not(@class)]/text()  
+
+

@@ -25,4 +25,6 @@ $x("//div[@class='lead']/p/text()").map(x => console.log(x.wholeText))
 
 // ? Extraer el texto del cuerpo de la noticia: 
 
-$x("//div[@class='html-content']//p/text()").map(x => console.log(x.wholeText))
+$x("//div[@class='html-content']//p[not(@class)]/text()").map(x => console.log(x.wholeText))  // p[not(@class)], trae todos los "p" que no tienen clase
+
+
